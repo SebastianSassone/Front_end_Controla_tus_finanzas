@@ -77,7 +77,7 @@ formIngresoValores.addEventListener('submit', async (event) => {
 
 async function cargarYMostrarValoresDesdeAPI() {
     try {
-        const response = await fetch('http://localhost:8081/traer_monto_ini_met_ahor'); // Ruta de lectura de montos
+        const response = await fetch('https://api-finanzas-deploy.onrender.com/traer_monto_ini_met_ahor'); // Ruta de lectura de montos
         const data = await response.json();
        
         data.forEach((entry) => {
@@ -136,7 +136,7 @@ async function guardarCambiosValMeta() {
     const nuevaMetaAhorro   = metaAhorroMostrada.value;
 
     try {        
-        await fetch(`http://localhost:8081/actualizar_monto_ini_met_ahor/${id_mont_met}`, {
+        await fetch(`https://api-finanzas-deploy.onrender.com/actualizar_monto_ini_met_ahor/${id_mont_met}`, {
             method: 'PUT', 
             headers: {
                 'Content-Type': 'application/json',
@@ -153,7 +153,7 @@ async function guardarCambiosValMeta() {
 
 async function eliminarMontMeta() {
     try {
-      const response = await fetch(`http://localhost:8081/eliminar_monto_ini_met_ahor/${id_mont_met}`, {
+      const response = await fetch(`https://api-finanzas-deploy.onrender.com/eliminar_monto_ini_met_ahor/${id_mont_met}`, {
         method: 'DELETE',
       });
   
@@ -177,7 +177,7 @@ async function eliminarMontMeta() {
 
   async function sumarTotalGastos() {
     try {
-      const response = await fetch('http://localhost:8081/balances_ingreso');
+      const response = await fetch('https://api-finanzas-deploy.onrender.com/balances_ingreso');
       if (!response.ok) {
         throw new Error('Error al obtener los datos.');
       }
