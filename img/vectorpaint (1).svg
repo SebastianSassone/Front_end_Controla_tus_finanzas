@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="198"><rect id="backgroundrect" width="100%" height="100%" x="0" y="0" fill="none" stroke="none"/>
+  <defs>
+    <linearGradient id="a" x1="50%" x2="50%" y1="-10.959%" y2="100%">
+      <stop stop-color="#57BBC1" stop-opacity=".25" offset="0%"/>
+      <stop stop-color="#015871" offset="100%"/>
+    </linearGradient>
+  <linearGradient id="svg_1" x1="NaN" x2="NaN" y1="-10.959%" y2="100%">
+      <stop stop-color="#57BBC1" stop-opacity=".25" offset="0%"/>
+      <stop stop-color="#015871" offset="100%"/>
+    </linearGradient><linearGradient id="svg_3" spreadMethod="pad"><stop stop-color="#00be00" stop-opacity="1" offset="0.45703125"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/></linearGradient><linearGradient id="svg_4"><stop stop-color="#4a90d6" stop-opacity="1" offset="0"/><stop stop-color="#b56f29" stop-opacity="1" offset="1"/></linearGradient><linearGradient id="svg_5" spreadMethod="pad" x1="0.515625" y1="0.015625" x2="0.5390625" y2="1"><stop stop-color="#00be00" stop-opacity="1" offset="0.45703125"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/><stop stop-color="#ff41ff" stop-opacity="1" offset="1"/></linearGradient><linearGradient id="svg_6" x2="0.4974808692932129" y2="1" x1="0.4974808692932129" y1="0.9965265989303589"><stop stop-color="#0eb50e" stop-opacity="1" offset="0"/><stop stop-color="#f14af1" stop-opacity="1" offset="1"/></linearGradient></defs>
+  
+<g class="currentLayer" style=""><title>Layer 1</title><path fill="url(#svg_6)" fill-rule="evenodd" d="M1620.7302905273436,128.5817234664879 C1309.7352905273438,128.5817234664879 1210.8372905273436,-13.380880609182356 809.7352905273438,-13.088174209026334 c-400,0 -500,141.66989767551422 -789,141.66989767551422 v90.1535712480545 H1620.7352905273438 s-0.005000000000000023,-56.199628829956055 -0.005000000000000023,-90.1535712480545 z" class="selected" fill-opacity="1" opacity="1" stroke-opacity="1" stroke="#5ce866" stroke-width="1" id="svg_2"/></g></svg>

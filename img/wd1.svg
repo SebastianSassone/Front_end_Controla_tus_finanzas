@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<svg width="1600" height="198" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+ <defs>
+  <clipPath id="clip0">
+   <rect fill="white" height="600" id="svg_1" width="1600"/>
+  </clipPath>
+ </defs>
+ <g class="layer">
+  <title>Layer 1</title>
+  <g clip-path="url(#clip0)" id="svg_2">
+   <path clip-rule="evenodd" d="m1601,76c-311,0 -409.9,121.25 -811,121c-400,0 -500,-121 -789,-121l0,-77l1600,0c0,0 0,48 0,77z" fill="#ffffff" fill-rule="evenodd" id="svg_3"/>
+  </g>
+ </g>
+</svg>

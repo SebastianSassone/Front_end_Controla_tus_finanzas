@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controla tus finanzas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Exo:wght@100&family=Gothic+A1:wght@100&display=swap" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/css/anychart-ui.min.css" type="text/css" rel="stylesheet">
+    <link href="https://cdn.anychart.com/releases/v8/fonts/css/anychart-font.min.css" type="text/css" rel="stylesheet">
+    <!-- <script src="https://cdn.anychart.comX/releases/v8/js/anychart-base.min.js"></script> -->
+	  <script src="https://cdn.anychart.com/releases/v8/js/anychart-base.min.js"></script>
+
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-ui.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/v8/js/anychart-exports.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <nav class="menu">
+      <section class="menu__container">
+          <div class="pag_logo">
+              <p class="p_verde">CONTROLA</p>
+              <p class="p_negro">TUS</p>
+              <p class="p_verde">FINANZAS</p>
+          </div>   
+  
+          <ul class="menu__links">
+              <li class="menu__item">
+                  <a href="../index.html" class="menu__link">INICIO</a>
+              </li>
+  
+              <li class="menu__item">
+                  <a href="ingreso.html" class="menu__link">NUEVO INGRESO<a></a>
+              </li>
+  
+              <li class="menu__item menu__item--show">
+                  <a href="cuenta.html" class="menu__link">CUENTA<a>
+  
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                           <a href="registro.html" class="menu__link menu__link--inside">REGISTRARSE</a>
+                        </li>
+                        <li class="menu__inside">
+                            <a href="iniciar_sec.html" class="menu__link menu__link--inside">INICIAR SESION</a>
+                        </li>
+                    </ul>
+                </li>
+    
+                <li class="menu__item  menu__item--show">
+                    <a href="balan_actu.html" class="menu__link">BALANCES</a>
+    
+                    <ul class="menu__nesting">
+                        <li class="menu__inside">
+                            <a href="balan_glob.html" class="menu__link menu__link--inside">GLOBAL</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+  
+          <div class="menu__hamburguer">
+              <i class="fas fa-bars"></i>
+          </div>
+      </section>
+  
+    
+  </nav>
+    <body>
+    <section class="section_grafico">
+      <div class="tit-grafic"></div>
+      <div id="container"></div>
+    </section>
+    <div class="list-container">
+      <table id="category-list">
+          <thead class="thead">
+              <tr>
+                <th>Producto</th>
+                <th>Categortia</th>
+                <th>Subcategoria</th>
+                <th>Valor</th>
+                <th>Fecha</th>
+                <th>Hora</th>
+                <th class="empty-col"></th>
+              </tr>
+          </thead>
+          <tbody>
+             
+          </tbody>
+      </table>
+  </div>
+    
+    </section>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <div class="pag_logo_f">
+                <p class="p_verde_f">CONTROLA</p>
+                <p class="p_negro_f">TUS</p>
+                <p class="p_verde_f">FINANZAS</p>
+            </div>    
+
+            <p class="footer-links">
+                <a href="index.html">Inicio</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="#">Blog</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Controla tus finanzas</strong></p>
+        </div>
+
+        <div class="footer-center" id="footer-distributed">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Buenos Aires</span>
+                    CABA</p>
+            </div>
+
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+54 223 567896</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="mailto:sagar00001.co@gmail.com">controlatusfinanzas@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre nuestra aplicacion</span>
+                <strong>Controla tus finanzas</strong> 
+                Es una pagina web destinada al control de nuestras finanzas 
+                personales para obtener mejores resultados en la administracion de la misma.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+  </body>
+  <script src="../js/funcionalidades/script.js"></script>
+  <script src="../js/balances/balances_actual/grafic_ac.js"></script>
+  <script src="../js/balances/balances_actual/listad_ac.js"></script>
+</html>
+                    

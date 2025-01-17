@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controla tus finanzas</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC&family=Exo:wght@100&family=Gothic+A1:wght@100&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7e5b2d153f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <nav class="menu">
+      <section class="menu__container">
+          <div class="pag_logo">
+              <p class="p_verde">CONTROLA</p>
+              <p class="p_negro">TUS</p>
+              <p class="p_verde">FINANZAS</p>
+          </div>   
+  
+          <ul class="menu__links">
+              <li class="menu__item">
+                  <a href="../index.html" class="menu__link">INICIO</a>
+              </li>
+  
+              <li class="menu__item">
+                  <a href="ingreso.html" class="menu__link">NUEVO INGRESO<a></a>
+              </li>
+  
+              <li class="menu__item menu__item--show">
+                  <a href="cuenta.html" class="menu__link">CUENTA<a>
+  
+                  <ul class="menu__nesting">
+                      <li class="menu__inside">
+                         <a href="registro.html" class="menu__link menu__link--inside">REGISTRARSE</a>
+                      </li>
+                      <li class="menu__inside">
+                          <a href="iniciar_sec.html" class="menu__link menu__link--inside">INICIAR SESION</a>
+                      </li>
+                  </ul>
+              </li>
+  
+              <li class="menu__item  menu__item--show">
+                <a href="balan_actu.html" class="menu__link">BALANCES</a>
+
+                <ul class="menu__nesting">
+                    <li class="menu__inside">
+                        <a href="balan_glob.html" class="menu__link menu__link--inside">GLOBAL</a>
+                    </li>
+                </ul>
+            </li>
+          </ul>
+  
+          <div class="menu__hamburguer">
+              <i class="fas fa-bars"></i>
+          </div>
+      </section>
+  </nav>
+</head>
+<body>
+    <section class="section_cuenta">
+		<div class="div_datos_cuenta">
+        <div class="input_dat_cuen">
+            <input type="text" id="nombre"  class="nombre" readonly value="Nombre"></input>
+            <input type="text" id="apellido"  class="apellido" readonly value="Apellido"></input>
+            <input type="text" id="email"  class="email" readonly value="Email"></input>
+        </div>
+        <div class="btns_edit_dat_cuen">
+            <div id="editarBtn" class="edit-btn"></div>
+            <div id="guardarBtn" style="display: none;" class="save-btn"></div>
+        </div>
+        </div>
+
+        <form id="form_ingreso_valores" action="/ingreso" method="POST" class="form_ingreso_valores">
+            <label for="valorInicial">Monto Inicial</label>
+            <input type="number" id="monto_inicial" name="valor_inicial">
+            <label for="metaAhorro">Meta de Ahorro</label>
+            <input type="number" id="meta_ahorro" name="meta_ahorro">
+            <button type="submit" id="guardarMetaBtn">Guardar</button>
+        </form>
+    
+        <div class="div_valores" id="div_valores">
+            <div class="div_mos_val"> 
+                <p>Monto Inicial: <input type="number" id="montoInicialMostrado"  class="montoInicialMostrado" readonly></input></p>
+                <p>Meta de Ahorro: <input type="number" id="metaAhorroMostrada" class="metaAhorroMostrada" readonly></input></p>
+            </div> 
+            <div class="btns_edit_val">           
+               <div id="editarBt" class="edit-btn"></div>
+               <div id="guardarCambiosBt" style="display: none" class="save-btn"></div>
+               <div id="eliminarBt" class="delete-btn"></div>
+            </div>
+        </div>
+    
+        <div class="div_grafic_cuenta" id="div_grafic_cuenta">
+           <canvas class="grafic_c" id="myChart"></canvas>
+           <p>La meta esta siendo cumplida: <p id="meta_cum_ac"></p></p>
+           <p>El total de gastos es de: <p id="tot_gas_ac"></p></p>
+        </div>
+
+        <section class="section_form_cierre" id="section_form_cierre">
+             <form action="/cierre" method="POST" id="form_cierre" class="form_cierre">
+                <label for="monto_in">Monto inicial:</label>
+                    <input type="number" id="monto_in" readonly for="monto_in">
+                <label for="met_aho">Meta de ahorro</label>
+                    <input type="number" id="met_aho" readonly for="met_aho">
+                <label for="total_gas">Total gastos:</label>
+                    <input type="number" id="total_gas" readonly for="total_gas">
+                <label for="total_aho">Total ahorro:</label>
+                    <input type="number" id="total_aho" readonly for="total_aho"> 
+                <div class="div_button_cierre">
+                    <button type="submit" id="button_cierre" class="button_cierre">Confirmar cierre</button>        
+                </div>
+                </form>                               
+        </section>
+
+<div class="container_btns">
+    <button class="btn_cuenta" id="cerrarSesionBtn">Cerrar sesion</button>
+    <div id="button_mas_cuen" class="button_mas_cuen">Mas opciones</div>
+    <button id="btn_eliminar_cuenta" class="btn_eliminar_cuenta">Eliminar cuenta</button>
+</div>
+
+    </section>    
+    <footer class="footer-distributed" id="footer-distributed"> 
+
+        <div class="footer-left">
+            <div class="pag_logo_f">
+                <p class="p_verde_f">CONTROLA</p>
+                <p class="p_negro_f">TUS</p>
+                <p class="p_verde_f">FINANZAS</p>
+            </div>    
+
+            <p class="footer-links">
+                <a href="index.html">Inicio</a>
+                |
+                <a href="#">About</a>
+                |
+                <a href="#">Contact</a>
+                |
+                <a href="#">Blog</a>
+            </p>
+
+            <p class="footer-company-name">Copyright © 2023 <strong>Controla tus finanzas</strong></p>
+        </div>
+
+        <div class="footer-center">
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Buenos Aires</span>
+                    CABA</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+54 223 567896</p>
+            </div>
+            <div>
+                <i class="fa fa-envelope"></i>
+                <p><a href="controlatusfinanzas@gmail.com">controlatusfinanzas@gmail.com</a></p>
+            </div>
+        </div>
+        <div class="footer-right">
+            <p class="footer-company-about">
+                <span>Sobre nuestra aplicacion</span>
+                <strong>Controla tus finanzas</strong> 
+                Es una pagina web destinada al control de nuestras finanzas 
+                personales para obtener mejores resultados en la administracion de la misma.
+            </p>
+            <div class="footer-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="../js/funcionalidades/script.js"></script>
+<script src="../js/cuenta/cuenta/cuenta.js" type="module"></script>
+<script src="../js/cuenta/monto_meta/monto_meta.js"></script>
+<script src="../js/cuenta/cierre/cierre.js"></script>
+</html>
