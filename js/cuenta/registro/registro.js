@@ -33,7 +33,7 @@ form_registro.addEventListener('submit', async (event) => {
          throw new Error('Error al registrarse');
        }
   
-      window.location.replace("http://localhost:5500/html/cuenta.html");
+      window.location.replace("https://front-end-controla-tus-finanzas.onrender.com/html/cuenta.html");
         
      } catch (error) {}
    });
