@@ -22,7 +22,7 @@ form_registro.addEventListener('submit', async (event) => {
        const noteData = {
         name, lastname, email, password, confirmPassword
        };
-       const response = await fetch('http://localhost:8081/registrar_user', {
+       const response = await fetch('https://api-finanzas-deploy.onrender.com/registrar_user', {
          method: 'POST',
          headers: { 'Content-Type': 'application/json' },
         
