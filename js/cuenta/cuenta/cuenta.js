@@ -134,7 +134,7 @@ async function eliminarcuenta() {
       if (!response.ok) {
         throw new Error('Error al eliminar los datos.');
       }
-      window.location.replace("http://localhost:5500/index.html");
+      window.location.replace("https://front-end-controla-tus-finanzas.onrender.com/index.html");
       tbody.removeChild(row);
     } catch (error) {
       console.error('Error:', error);
