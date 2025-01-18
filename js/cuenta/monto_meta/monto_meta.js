@@ -59,7 +59,7 @@ formIngresoValores.addEventListener('submit', async (event) => {
 
     try {
         const noteData = { monto_inicial, meta_ahorro};
-        await fetch('http://localhost:8081/guardar_monto_ini_met_ahor', {
+        await fetch('https://api-finanzas-deploy.onrender.com/guardar_monto_ini_met_ahor', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
